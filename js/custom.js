@@ -42,4 +42,12 @@ $(document).ready(function() {
     }
   });
   
+  $('html').on('mouseup', function(e) {
+      if(!$(e.target).closest('.popover').length) {
+          $('.popover').each(function(){
+              $(this.previousSibling).popover('hide');
+          });
+      }
+  });
+      
 });

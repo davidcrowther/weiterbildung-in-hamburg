@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  
    $('section.page-header').anystretch("img/mountains.jpg", {speed: 150}); 
    $('article.yellow-section').anystretch("img/yellow-bg.png", {speed: 150}); 
    $('article.evening').anystretch("img/bg-2.jpg", {speed: 150}); 

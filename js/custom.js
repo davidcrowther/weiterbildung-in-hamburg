@@ -19,8 +19,13 @@ $(document).ready(function() {
    $(document).on('click', '.popover-content ul li', function(event) {
       var this_text = $(this).html();
       var this_id = $(this).parent().parent().parent().find('h3.popover-title').text();
+      var this_input = $(this).data('value');
+      var this_input_name = $(this).closest('ul').data('input');
       $(this_id).text(this_text);
       $(this).parent().parent().parent().removeClass('in').css('display','none');
+      $('input[name='+this_input_name+']').val(this_input);
+      // console.log(this_input);
+
       return false;        
    });
 

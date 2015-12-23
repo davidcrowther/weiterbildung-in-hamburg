@@ -1191,7 +1191,8 @@ article.form-main-level .checkbox-group {
   .inputs-group p {
     padding-left: 0;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+    margin-top: 10px;
   }
 }
 .inputs-group p.last {
@@ -1205,19 +1206,6 @@ article.form-main-level .checkbox-group {
 @media only screen and (max-width: 768px) {
   .inputs-group p.last {
     padding-left: 0;
-  }
-}
-.inputs-group label.error {
-  position: absolute;
-  bottom: -10px;
-  font-size: 14px;
-}
-@media only screen and (max-width: 768px) {
-  .inputs-group label.error {
-    position: relative;
-    bottom: 0;
-    display: block;
-    width: 100%;
   }
 }
 .inputs-group .form-control {
@@ -1238,6 +1226,27 @@ article.form-main-level .checkbox-group {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+}
+label.error {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: block;
+  text-align: right;
+  font-size: 14px;
+}
+.with-error-left-aligned label.error {
+  text-align: left;
+  padding-left: 27%;
+}
+@media only screen and (max-width: 768px) {
+  label.error {
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    text-align: right !important;
   }
 }
 article.with-man {

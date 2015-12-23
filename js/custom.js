@@ -54,5 +54,85 @@ $(document).ready(function() {
           });
       }
   });
-      
+   
+
+
+    $('form#mainform').validate({
+      rules: {
+        email: {
+          minlength: 2,
+          required: true,
+          email: true
+        },  
+        // checkbox1: {
+        //   required: true
+        // },  
+        // checkbox2: {
+        //   required: true
+        // },  
+        input1: {
+          minlength: 1,
+          number: true,
+          required: true
+        },  
+        input2: {
+          minlength: 1,
+          number: true,
+          required: true
+        },  
+        // checkbox4: {
+        //   required: true
+        // },  
+        // checkbox5: {
+        //   required: true
+        // },  
+        somename: {
+          minlength: 2,
+          required: true
+        },  
+        surname: {
+          minlength: 2,
+          required: true
+        },  
+        phonenumber: {
+          minlength: 2,
+          required: true
+        }
+        // ,  
+        // checkbox7: {
+        //   required: true
+        // },  
+        // checkbox8: {
+        //   required: true
+        // },  
+        // checkbox9: {
+        //   required: true
+        // }
+
+      },
+      // errorLabelContainer: '.errorTxt',
+      highlight: function(label) {
+        // $(label).closest('.form-control').addClass('has-error');
+      },
+      success: function(label) {
+        // $(label).text('OK!').addClass('valid').closest('.form-control').addClass('has-success');
+
+      }, 
+      errorPlacement: function(error, element) {
+          var placement = $(element).closest('.form-group');
+          $(placement).append(error)
+          // if (placement) {
+          // } else {
+          //     error.insertAfter(element);
+          // }
+      },
+      messages: { 
+       email: {
+         email: "Your email address must be in the format of 'email@yourdomain.com'"
+        }
+      }
+    });
+
+
+
 });
